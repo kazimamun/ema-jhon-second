@@ -1,7 +1,7 @@
 import React from 'react';
 import './Cart.css';
 
-const Cart = (props) => {
+const Cart = (props) => { // props come from shop
     const cart = props.cart;
     const totalPrice = cart.reduce((total, prd) => total + prd.price, 0);
     const tax = totalPrice / 10;
