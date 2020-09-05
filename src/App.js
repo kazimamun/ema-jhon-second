@@ -1,13 +1,23 @@
 import React from 'react';
 import Header from './Component/Header/Header';
 import Shop from './Component/Shop/Shop';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
 function App() {
   return (
-    <div>
-      <Header />
-      <Shop />
-    </div>
+    <Router>
+      <div>
+        <Header />
+        <Route path='/shop'>
+          <Shop />
+        </Route>        
+      </div>
+    </Router>
   );
 }
 
