@@ -20,6 +20,7 @@ const Shop = () => {
                 <div className="product-container">
                     {
                         products.map(pd=><Product 
+                                            showAddToCart={true}
                                             key={pd.key} 
                                             product={pd} 
                                             eventListener={handleAddProduct}

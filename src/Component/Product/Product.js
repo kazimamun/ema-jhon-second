@@ -20,13 +20,13 @@ const Product = (props) => { //props come from shop
                 </p>
                 <p>price: ${price}</p>
                 <p><small>only {stock} left in stock - order soon</small></p>
-                <button 
+                { props.showAddToCart && <button 
                     className="main-button" 
                     onClick={()=>props.eventListener(props.product)}
                 >
                     <FontAwesomeIcon icon={faShoppingCart} /> 
                     add to cart
-                </button>
+                </button>}
             </div>
         </div>
     );

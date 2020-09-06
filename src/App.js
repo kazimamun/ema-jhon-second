@@ -29,7 +29,7 @@ function App() {
           <Route exact path='/'>
             <Shop />
           </Route> 
-          <Route path='/product/:productKey'>
+          <Route path="/product/:productKey">
             <ProductDetails />
           </Route>
           <Route path='*'>
