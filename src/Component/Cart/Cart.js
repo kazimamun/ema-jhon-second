@@ -3,7 +3,7 @@ import './Cart.css';
 
 const Cart = (props) => { // props come from shop
     const cart = props.cart;
-    const totalPrice = cart.reduce((total, prd) => total + prd.price, 0);
+    const totalPrice = cart.reduce((total, prd) => total + prd.price * prd.quantity, 0);
     const tax = totalPrice / 10;
     let shipping = 12.99;
     if(totalPrice>35 || totalPrice === 0){
@@ -22,6 +22,8 @@ const Cart = (props) => { // props come from shop
             <p><small>Shipping Cost: {fixed(shipping)}</small></p>
             <p><small>Tax + Vat: {fixed(tax)}</small></p>
             <p>Total Price: {fixed(totalPrice + shipping + tax)}</p>
+            <br/>
+            { props.children }
         </div>
     );
 };

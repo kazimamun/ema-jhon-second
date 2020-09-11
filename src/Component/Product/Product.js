@@ -8,7 +8,7 @@ const Product = (props) => { //props come from shop
     const {img, name, seller, price, stock, key} = props.product;
     // console.log(props.product);
     return (
-        <div className='product'>
+        <div style={{display: 'flex'}} className='product'>
             <div className="image">
                 <img src={img} alt=""/>
             </div>
